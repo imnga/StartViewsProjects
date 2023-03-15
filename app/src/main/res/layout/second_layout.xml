@@ -5,7 +5,7 @@
 
     <TextView
         android:id="@+id/header"
-        android:text="Welcome to the Hell"
+        android:text="Welcome to Android"
         android:textSize="26sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
