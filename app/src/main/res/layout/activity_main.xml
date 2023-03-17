@@ -57,44 +57,43 @@
 <!--        android:text="Approve"-->
 <!--        />-->
 
+<!--    // практика с 3мя текствью разноцветными -->
+<!--    <TextView-->
+<!--        android:id="@+id/normal"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#E6A84D"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:text="Width 200dp"-->
+<!--        android:textColor="#BD1919"-->
+<!--        android:textStyle="normal"-->
+<!--        android:textSize="26sp" />-->
 
+<!--    <TextView-->
+<!--        android:id="@+id/bold"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="#226808"-->
+<!--        android:gravity="bottom|end"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Width wrap_content"-->
+<!--        android:textColor="#FFC107"-->
+<!--        android:textSize="26sp"-->
+<!--        android:textStyle="bold" />-->
 
-    <TextView
-        android:id="@+id/normal"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="#E6A84D"
-        android:layout_marginTop="10dp"
-        android:padding="20dp"
-        android:text="Width 200dp"
-        android:textColor="#BD1919"
-        android:textStyle="normal"
-        android:textSize="26sp" />
-
-    <TextView
-        android:id="@+id/bold"
-        android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"
-        android:background="#226808"
-        android:gravity="bottom|end"
-        android:padding="10dp"
-        android:text="Width wrap_content"
-        android:textColor="#FFC107"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <TextView
-    android:id="@+id/italic"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#5D2D5D"
-    android:layout_marginTop="10dp"
-    android:padding="50dp"
-    android:text="Width match_parent"
-    android:textColor="#80FFFFFF"
-    android:textStyle="italic"
-    android:gravity="center"
-    android:textSize="26sp" />
+<!--    <TextView-->
+<!--    android:id="@+id/italic"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="#5D2D5D"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:padding="50dp"-->
+<!--    android:text="Width match_parent"-->
+<!--    android:textColor="#80FFFFFF"-->
+<!--    android:textStyle="italic"-->
+<!--    android:gravity="center"-->
+<!--    android:textSize="26sp" />-->
 
 </LinearLayout>
