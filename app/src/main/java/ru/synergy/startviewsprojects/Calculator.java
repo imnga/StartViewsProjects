@@ -3,6 +3,7 @@ package ru.synergy.startviewsprojects;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,11 +40,21 @@ public class Calculator extends AppCompatActivity {
 //
         ////
 
+
+        ////  intent - это посылка (или намерение), явл-ся классом  и может вызывать активность и внутри приложения и при переходе в другое
+        // объявление анройду о желании запуска какой-либо новой активности либо сервиса (например открыть камеру уст-ва и сделать фото вернуть ее в приложении )
+        //мы можем исп-ть intent  как извещение о том что что-то произошло , все активности м\у собой общаются через эти интенты
+        //мы явно хотим запустить какую-то активность(на андройде например выбрать какой браузер исп-ть)
+        // бывают двух видов: явные и не явные
+
+
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(LogcatTag, "Button have been pushed");
                 calculateAnswer();
+                Intent i = new Intent(Calculator.this,MainActivity.class);//написать письмо (+ калькулятор- класс контекста)
+                startActivity(i);// отправили письмо
             }
         });
     }
@@ -85,6 +96,10 @@ public class Calculator extends AppCompatActivity {
     RadioButton sub = (RadioButton) findViewById(R.id.subtract);
     RadioButton multiply = (RadioButton) findViewById(R.id.multiply);
     RadioButton divide = (RadioButton) findViewById(R.id.divide);
+
+    numOne.setText("0");
+    numTwo.setText("0");
+    add.setChecked(true);
 
     TextView answer = (TextView) findViewById(R.id.result);
 
