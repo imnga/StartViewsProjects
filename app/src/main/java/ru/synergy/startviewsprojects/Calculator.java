@@ -2,12 +2,17 @@ package ru.synergy.startviewsprojects;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.RadioButton;
+import android.widget.SimpleAdapter;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +27,18 @@ public class Calculator extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
 
         final Button calculate = (Button) findViewById(R.id.calc);
+
+//        //Context training
+//        TextView textView = new TextView (this);
+//        ListAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),);
+//             //достп из класса Activity -- наследник Context
+//        getSystemService(LAYOUT_INFLATER_SERVICE);//его можем получить только из класса activity и не сработает в классе которая не является активностью
+//        //Shared preferences (prefs) доступ с использ-ем контекста приложния//можно достать только след оразом
+//        SharedPreferences prefs = getApplicationContext().getSharedPreferences("PREFS", MODE_PRIVATE);//можем сохр данные, локальное хранилище на андройде,лучше не злоупотреблять,своеобразно
+//        //так или иначе днны локально привязаны на сам контекст -менялся к-т был аплик-н стал активити-данные другие -интересная архитектура
+//
+        ////
+
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,5 +129,11 @@ public class Calculator extends AppCompatActivity {
     }
     Log.d(LogcatTag,"The result of operation is: "+ solution);
     answer.setText("The answer is" + solution);
+
+    Context contextApp = getApplicationContext();
+    //Context contextLocal = getContext();//будет тут недоступен
+    Context context = getBaseContext();
+
+
     }
 }
